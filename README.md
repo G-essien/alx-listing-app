@@ -1,40 +1,54 @@
-This is a [Next.js](https://nextjs.org) project bootstrapped with [`create-next-app`](https://nextjs.org/docs/pages/api-reference/create-next-app).
+# ALX Listing App
 
-## Getting Started
+## Project Description
 
-First, run the development server:
+The **ALX Listing App** is the foundational setup for an Airbnb clone that serves as the starting point for building a modern property listing page. This project focuses on creating a clean, scalable, and maintainable codebase using **Next.js**, **TypeScript**, **TailwindCSS**, and **ESLint**. The goal is to create a responsive, user-friendly interface for displaying property listings, enabling functionalities like booking, viewing details, and more.
 
-```bash
-npm run dev
-# or
-yarn dev
-# or
-pnpm dev
-# or
-bun dev
-```
+By completing this project, learners will gain hands-on experience in web development using modern technologies and best practices, while ensuring the app is ready for further enhancements and production deployment.
 
-Open [http://localhost:3000](http://localhost:3000) with your browser to see the result.
+## Project Structure
 
-You can start editing the page by modifying `pages/index.tsx`. The page auto-updates as you edit the file.
+The **ALX Listing App** is structured to promote scalability and maintainability. Below is a breakdown of the core directories and files:
 
-[API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) can be accessed on [http://localhost:3000/api/hello](http://localhost:3000/api/hello). This endpoint can be edited in `pages/api/hello.ts`.
+### `components/`
+This directory contains all reusable UI components that can be shared across different pages. It includes:
 
-The `pages/api` directory is mapped to `/api/*`. Files in this directory are treated as [API routes](https://nextjs.org/docs/pages/building-your-application/routing/api-routes) instead of React pages.
+- **common/Card.tsx**: A reusable Card component used to display property details (title, description, image).
+- **common/Button.tsx**: A reusable Button component used for interactive actions like "Book Now" or "View Details".
 
-This project uses [`next/font`](https://nextjs.org/docs/pages/building-your-application/optimizing/fonts) to automatically optimize and load [Geist](https://vercel.com/font), a new font family for Vercel.
+These components are designed to be modular and flexible, making it easier to add or modify UI elements without affecting other parts of the app.
 
-## Learn More
+### `interfaces/`
+The `interfaces/` directory contains TypeScript interfaces that define the structure and types of data passed to components. This ensures type safety and code consistency. Currently, it includes:
 
-To learn more about Next.js, take a look at the following resources:
+- **index.ts**: Contains interfaces like `CardProps` and `ButtonProps` to ensure the correct types are passed into components.
 
-- [Next.js Documentation](https://nextjs.org/docs) - learn about Next.js features and API.
-- [Learn Next.js](https://nextjs.org/learn-pages-router) - an interactive Next.js tutorial.
+### `constants/`
+This directory holds reusable constant values and settings for the application. This includes things like API URLs or UI text that may need to be accessed throughout the app. For example:
 
-You can check out [the Next.js GitHub repository](https://github.com/vercel/next.js) - your feedback and contributions are welcome!
+- **index.ts**: Includes constants like `API_URL` (for API requests) and `DEFAULT_IMAGE` (for fallback images).
 
-## Deploy on Vercel
+### `public/assets/`
+This directory is where all static assets (images, SVGs, icons, etc.) are stored. These assets are referenced in components and pages, such as property images used in the Card component. By organizing assets in this way, we make them easy to manage and maintain. For example:
 
-The easiest way to deploy your Next.js app is to use the [Vercel Platform](https://vercel.com/new?utm_medium=default-template&filter=next.js&utm_source=create-next-app&utm_campaign=create-next-app-readme) from the creators of Next.js.
+- Property images, icons, and other media files used in the app are stored here for easy reference.
 
-Check out our [Next.js deployment documentation](https://nextjs.org/docs/pages/building-your-application/deploying) for more details.
+### `styles/`
+Contains the global CSS styles for the app, including the TailwindCSS setup.
+
+- **globals.css**: This file imports TailwindCSS base, components, and utilities to style the app. It includes any additional global styling as needed.
+
+### `pages/`
+This is the standard directory for Next.js pages. It contains:
+
+- **index.tsx**: The main landing page where the property listings will be displayed.
+
+### `README.md`
+This file provides documentation for the project, describing its purpose, goals, and folder structure. It is intended to help developers understand the setup and guide them through running the app locally.
+
+## How to Run the Project Locally
+
+1. Clone the repository:
+   ```bash
+   git clone https://github.com/your-username/alx-listing-app.git
+
