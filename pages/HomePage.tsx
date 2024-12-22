@@ -1,3 +1,4 @@
+//import files
 import React from "react";
 import { PROPERTYLISTINGSAMPLE } from "../constants/index";
 import PropertyCard from "./PropertyCard";
