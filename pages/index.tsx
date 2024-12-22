@@ -1,6 +1,5 @@
 import Image from "next/image";
 import localFont from "next/font/local";
-import { PropertyProps } from "../../interfaces";
 
 
 const geistSans = localFont({
